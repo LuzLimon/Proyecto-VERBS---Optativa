@@ -1,0 +1,62 @@
+.card{
+    text-align: center;
+    margin:0px auto;
+}
+
+.navbar{
+    color: white;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+#contador {
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+#next{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#showverb{
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+}
+
+#verbs-container{
+    margin: 0 35%;
+}
+
+.verbs-answer{
+    display: block;
+}
+
+.rightAnswer, .rightAnswer:hover{
+    background-color: #30b35c;
+    border-color: #30b35c;
+    color: white;
+}
+
+.wrongAnswer, .wrongAnswer:hover{
+    background-color: #b33030;
+    border-color: #b33030;
+    color: white;
+}
+
+/* Manejo de margin arriba */
+
+#next{
+    margin-top: 1rem;
+    cursor: pointer;
+    color: green;
+}
+
