@@ -3,8 +3,13 @@
     margin:0px auto;
 }
 
+.fondo{
+    background-color: #ffbcf3;
+}
+
 .navbar{
     color: white;
+    background-color: rgb(221, 152, 255);
 }
 
 .navbar-brand{
@@ -17,7 +22,7 @@
 }
 
 #next{
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,5 +63,11 @@
     margin-top: 1rem;
     cursor: pointer;
     color: green;
+}
+
+#restart {
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 

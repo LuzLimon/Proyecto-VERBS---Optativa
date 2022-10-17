@@ -11,16 +11,20 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-      <nav class="navbar bg-dark">
+<!-- Barra de navegación -->
+<body class="fondo">
+      <nav class="navbar">
         <div class="container-fluid">
           <a class="navbar-brand">Funny Verbs</a>
           <form class="d-flex" role="search">
-            <p id="contador">1/2</p>
+            <p id="verbs-counter"></p>
           </form>
         </div>
       </nav>
+      <!-- Página donde hacemos click para ingresar al juego -->
+      <div id="restart" style="display: flex; justify-content:right; align-items: right;">
+        <img src="https://cdn-icons-png.flaticon.com/512/3596/3596120.png " width="60" height="60" alt="" title="" class="img-small">
+      </div>
       <div id="next">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-caret-right-fill"
         viewBox="0 0 16 16" id="next">
@@ -28,12 +32,16 @@
           d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
       </svg>
       </div>
-      <h1 id="showverb" class="text-center">Play to Start</h1>
+      <h1 id="showVerb" class="text-center">Play to Start</h1>
     <div id="next" style="display: flex; justify-content:center; align-items: center;">
       <div class="container">
         <div id="verbs-container">
-          <div id="showImage"></div>
+          <!-- id para mostrar la imagen -->
+          <div id="showImage"></div> 
+          <br>
+          <!-- id para mostrar el audio -->
           <audio id="showAudio"></audio>
+          <!-- id's de los cuatro botones y la clase para las posibles respuestas de los verbos -->
           <p id="first-verb" class="verbs-answer"></p>
           <p id="second-verb" class="verbs-answer"></p>
           <p id="third-verb" class="verbs-answer"></p>
@@ -42,9 +50,11 @@
         <small class="counter">
           <span id="all-right-answers"></span>
         </small>
+        <!-- <button onclick="playAudio()" type="button">Reproducir</button>
+        <button onclick="pauseAudio()" type="button">Pausar</button> -->
       </div>
     </div>
-    <div class="card" style="width: 18rem;">
+    <!-- <div class="card" style="width: 18rem;">
       <h1>Visit</h1>
       <img src="./img/visit.jpg">
       <br>
@@ -53,7 +63,7 @@
       <button type="button" class="btn btn-outline-warning">visitar</button>
       <button type="button" class="btn btn-outline-warning">etiquetar</button>
       <p>Righte Answers: 9</p>
-    </div>
+    </div> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
