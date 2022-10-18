@@ -1,4 +1,4 @@
-// Estos son los elementos que nos permite verlos verbos
+// Estos son los elementos que nos permite verlos verbos.
 const showVerb = document.getElementById('showVerb');
 const showImage = document.getElementById('showImage');
 const showAudio = document.getElementById('showAudio');
@@ -16,31 +16,31 @@ const allRightCounter = document.getElementById('all-right-answers');
 const verbsContainer = document.getElementById('verbs-container');
 
 const numberOfVerbs = verbs.length;
-// Declaramos que solo se tenga una respuesta correcta y tres respuestas erroneas
+// Declaramos que sólo se tenga una respuesta correcta y tres respuestas erroneas.
 let answerRoullete = [0,1,1,1];
 
 let everyNumberOfVerbs = [];
 let rightAnswer;
 let RightAnswersCounter = 0;
 restart.style.display = 'none';
-// Aqui le damos la indicación que despues de dar play en la pagina principal se pase al juego.
+// Aquí le damos la indicación que después de seleccionar la opción de play en la página principal se pase al juego.
 play.addEventListener('click', function(){
     ponerVerbo();
     play.style.display = 'none';
     restart.style.display = 'flex';
 });
 
-//FUNCION PARA REGRESAR O SALIR DEL JUEGO
+//FUNCIÓN PARA REGRESAR O SALIR DEL JUEGO.
 restart.addEventListener('click', function(){
     location.reload();
 });
    
 
-// Aqui obtenemos una lista de manera aleatoria de los verbos que se mostraran
+// Aquí obtenemos una lista de manera aleatoria de los verbos que se mostrarán.
 makeRandomList();
-// Mandamos la indicación de iniciar en la última posición
+// Mandamos la indicación de iniciar en la última posición.
 let lastPosition = everyNumberOfVerbs.length-1;
-// Enesta función damos la indicación de que tenga la misma candidad de verbos en la lista y mostrarlos de manera aleatoria
+// En esta función damos la indicación de que tenga la misma candidad de verbos en la lista y mostrarlos de manera aleatoria.
 function makeRandomList(){
     for(var i = 0; i < numberOfVerbs; i++){
         everyNumberOfVerbs.push(i);
@@ -48,7 +48,7 @@ function makeRandomList(){
     everyNumberOfVerbs = everyNumberOfVerbs.sort(()=>Math.random()-0.5);
 }
 
-// Con esta funcion le mandamos la indicación de pintar las respuestas correctas de color verde y las respuestas incorrectas de color rojo añadiendo classList para el estilo.
+// Con esta función le mandamos la indicación de pintar las respuestas correctas de color verde y las respuestas incorrectas de color rojo añadiendo classList para el estilo.
 function buttonEffect(itsRight, button){
     if(itsRight){
         button.classList.add('rightAnswer');
@@ -82,7 +82,7 @@ third.addEventListener('click', function(){
 fourth.addEventListener('click', function(){
     buttonEffect(isItRigth_(fourth.innerHTML), this);
 });
-// Aqui obtenemos diferentes opciones de respuesta por verbo de manera aleatoria
+// Aquí obtenemos diferentes opciones de respuesta por verbo de manera aleatoria.
 function shuffleAnswers(array){
     let numberOfAnswersButtons = array.length;
     let randomIndex;
@@ -94,7 +94,7 @@ function shuffleAnswers(array){
     }
     return array;
 }
-// Esta funcion nos indicara la respuesta correcta.
+// Esta función nos indicará la respuesta correcta.
 function isItRigth_(answer){
     return answer == rightAnswer?true:false;
 }
@@ -117,7 +117,7 @@ function ponerVerbo(){
     // third.classList.add("btn", "btn-outline-primary", "btn-md");
     // fourth.classList.add("btn", "btn-outline-primary", "btn-md");
 
-    //Mejora de refactorizacion de codigo - forEach utilizado para recorrer los botones y darles estilo
+    //Mejora de refactorización de código - forEach utilizado para recorrer los botones y darles estilo.
     const button = [...document.querySelectorAll(".verbs-answer")];
         button.forEach(function(elemento) {
             elemento.classList.add("btn", "btn-outline-dark", "btn-md");
@@ -145,6 +145,6 @@ function ponerVerbo(){
         verbsCounter.innerHTML = "0 / " + numberOfVerbs;
         allRightCounter.innerHTML = "Right answers: " + RightAnswersCounter;
         showVerb.innerHTML = "Thank you !"; //Este es el mensaje que muestra una vez finalizado con el juego.
-        verbsContainer.innerHTML = ""; //Aqui ocultamos el contenido del juego de los verbos.
+        verbsContainer.innerHTML = ""; //Aquí ocultamos el contenido del juego de los verbos.
     }
 }

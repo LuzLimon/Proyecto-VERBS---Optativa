@@ -41,7 +41,7 @@ const verbs = [
     'Work',
     'Write'
 ]
-// Verbos en español
+// Verbos en español.
 const verbos = [
     'Aceptar',
     'Actuar',
